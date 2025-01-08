@@ -1,0 +1,479 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+h1 {
+    font-size: 1.75rem;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.customalert {
+    width: 30%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 3rem 0;
+    font-weight: 600;
+    position: fixed;
+    z-index: 50;
+    top: -28%;
+    left: 50%;
+    transition: all ease-in-out 1s;
+    transform: translateX(-50%);
+    background-color: #f5f9ff;
+    box-shadow: 5px 5px 0.75rem rgba(211, 211, 211, 0.493);
+    border-radius: 0.5rem;
+    margin: 0 auto;
+}
+
+.customalert i {
+    color: #448aff;
+}
+
+header {
+    width: 100%;
+    padding: 3rem 8%;
+    margin: 0 auto;
+    display: flex;
+    transition: all ease-in-out 500ms;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    text-transform: capitalize;
+}
+
+.logo {
+    width: 5rem;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    gap: 5rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav li:nth-child(3) {
+    width: 2.25rem;
+}
+
+.stretch {
+    font-weight: 700;
+    width: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #448aff;
+    color: #448aff;
+    transition: all ease-out 500ms;
+}
+
+.stretch:hover {
+    width: 2.25rem;
+}
+
+.cta {
+    background-color: #448aff;
+    padding: 0.8rem 1rem;
+    border-radius: 0.25rem;
+    color: white;
+}
+
+.addbookings {
+    width: 84%;
+    margin: 0 auto;
+}
+
+.addbookings h1 {
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+
+.bcontainer {
+    width: 100%;
+    background-color: #ffecee;
+    height: 15rem;
+    border-radius: 0.5rem;
+    padding-top: 2rem;
+    font-weight: 700;
+}
+
+.validatemessage {
+    color: red;
+    font-size: 0.75rem;
+}
+
+.addpeople {
+    width: 80%;
+    display: flex;
+    margin: 0 auto 3rem;
+    justify-content: space-between;
+}
+
+.addinput {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid#448aff;
+    border: 2px solid#ffcdd2;
+    border-radius: 0.45rem;
+}
+
+.box {
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+.box input {
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.box:first-child,
+.box:last-child {
+    background-color: #448aff;
+    background-color: #ffcdd2;
+    border-radius: 0.25rem 0 0 0.25rem;
+    font-size: 1.5rem;
+}
+
+.box:last-child {
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.box input {
+    width: 100%;
+    height: 100%;
+}
+
+.total {
+    width: 15%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.totaldisplay {
+    background-color: white;
+    padding: 0.125rem 1.5rem;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.displaybookings {
+    width: 84%;
+    margin: 3rem auto;
+    border-radius: 0.5rem;
+    background-color: #e0ecff;
+    padding: 2rem;
+}
+
+.generalbutton {
+    background-color: rgba(68, 137, 255, 0.5);
+    color: white;
+    margin: 0 7% 1rem auto;
+    width: 15%;
+    box-sizing: content-box;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    display: none;
+}
+
+.agerange {
+    width: 86%;
+    margin-inline: auto;
+    display: none;
+}
+
+.ageforms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    gap: 5rem 0;
+    margin-bottom: 8rem;
+    padding: 2rem;
+    background-color: #ffecee;
+    border-radius: 0.5rem;
+}
+
+em {
+    display: block;
+    width: 100%;
+    color: rgb(80, 80, 80);
+    text-align: center;
+}
+
+.agewithprice {
+    text-align: center;
+    font-style: italic;
+    background-color: #f5f9ff;
+    padding: 2rem;
+    font-weight: 800;
+    color: #448aff;
+    border-radius: 0.25rem;
+}
+
+.formtag {
+    text-align: center;
+    color: #448aff;
+    font-weight: 600;
+}
+
+.form, .newform {
+    width: fit-content;
+}
+
+.input {
+    font-size: 0.85rem;
+    margin-bottom: 0.35rem;
+}
+
+.form input[type=text], .newform input[type=text],
+input[type=number],
+select {
+    display: block;
+    height: 1.8rem;
+    width: 15rem;
+    border: none;
+    outline: none;
+    padding: 0 0.5rem;
+    border-radius: 0.15rem;
+}
+
+input[type=number] {
+    width: 5rem;
+}
+
+.gender {
+    color: rgb(75, 75, 75);
+}
+
+label {
+    color: black;
+}
+
+.button {
+    background-color: #448aff;
+    text-align: center;
+    padding: 0.5rem 0;
+    width: 60%;
+    border-radius: 0.25rem;
+    color: white;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.summarybox {
+    width: 45dvw;
+    height: 65dvh;
+    position: fixed;
+    left: 50%;
+    top: 15%;
+    z-index: 20;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 3rem rgb(194, 194, 194);
+    display: none;
+    padding: 2rem;
+    font-weight: 500;
+}
+
+.summarytitle {
+    margin-bottom: 3rem;
+}
+
+.summary {
+    color: #448aff;
+    font-weight: 700;
+    line-height: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.summarytable {
+    height: 10rem;
+    width: 100%;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    border-spacing: 0;
+}
+
+th {
+    background-color: #e0ecff;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+td,
+th {
+    padding: 0.5rem 0;
+    line-height: 1rem;
+    text-align: center;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(238, 238, 238);
+}
+
+tr:nth-child(1) {
+    position: sticky;
+    top: 0;
+}
+
+td:nth-child(2) {
+    color: #005eff;
+}
+
+td:nth-child(4) {
+    color: #ff5566;
+}
+
+.summarytable::-webkit-scrollbar {
+    display: none;
+}
+
+.summaryprice {
+    color: #448aff;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.summaryprice span {
+    background-color: #ffcdd2;
+    box-sizing: content-box;
+    padding: 0.125rem 0.25rem;
+}
+
+.summarycta {
+    margin-left: auto;
+    width: 37%;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1rem;
+}
+
+.cancelsummary {
+    border: 2px solid rgb(255, 157, 157);
+    color: white;
+    background-color: rgb(255, 157, 157);
+    border-radius: 0.25rem;
+    padding: 0.5rem 1.25rem;
+}
+
+.payup {
+    color: white;
+    background-color: #448aff;
+    border: 2px solid #448aff;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1.25rem;
+}
+
+.payup:hover {
+    background-color: #005eff;
+    border-color: #005eff;
+}
+
+.cancelsummary:hover {
+    background-color: red;
+    border-color: red;
+}
+
+i.fa-pen {
+    color: #448aff;
+    height: 0.9rem;
+    padding: 0 0.25rem;
+    margin-right: 0.25rem;
+    line-height: 0.9rem;
+    border-right: 1px solid #9b9b9b;
+    font-size: 0.5rem;
+    cursor: pointer;
+}
+
+i.fa-xmark {
+    color: #ff5566;
+    border-radius: 0.5rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    text-align: center;
+    border: 1px solid #ff5566;
+    font-size: 0.5rem;
+    cursor: pointer;
+}
+
+td:last-child {
+    align-items: center;
+}
+
+.gradient {
+    height: 13%;
+    width: 100%;
+    position: sticky;
+    bottom: -1px;
+    left: 0;
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 0));
+}
+
+#ageinitial {
+    color: #448aff;
+}
+
+.recordedit {
+    width: fit-content;
+    display: none;
+    background-color: #ffecee;
+    box-shadow: 0 0 3rem rgb(194, 194, 194);
+    padding: 2rem;
+    border-radius: 1rem;
+    position: fixed;
+    left: 3.5%;
+    top: 15%;
+    z-index: 20;
+}
+
+.recordedit>.form {
+    color: #005eff;
+}
+
+.summaryfilm {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+}

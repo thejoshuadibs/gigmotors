@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIG Motors</title>
+    <link rel="stylesheet" href="assets/fonts/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <div class="customalert">
+            <i class="fa-solid fa-warning"></i>
+            <div class="alertmessage"></div>
+        </div>
+        <header>
+            <div class="logo"><img src="assets/logo/LOGOO.png" alt=""></div>
+            <div class="navbar">
+                <ul class="nav">
+                    <li>HOME</li>
+                    <li>ABOUT</li>
+                    <li><div class="stretch">BOOK</div></li>
+                    <li>CONTACT</li>
+                </ul>
+                <div class="cta">BOOK TRIP</div>
+            </div>
+        </header>
+        <main>
+            <div class="addbookings addblur">
+                <h1>Add Bookings</h1>
+                <div class="bcontainer">
+                    <div class="addpeople">
+                        <div class="addperson">
+                            <div class="persontoadd">Adults</div>
+                            <div class="addinput">
+                                <div class="box remove">-</div>
+                                <div class="box"><input type="text" id="adultinput" value="0"></div>
+                                <div class="box add">+</div>
+                            </div>
+                        </div>
+                        <div class="addperson">
+                            <div class="persontoadd">Children</div>
+                            <div class="addinput">
+                                <div class="box remove">-</div>
+                                <div class="box"><input type="text" id="childinput" value="0"></div>
+                                <div class="box add">+</div>
+                            </div>
+                        </div>
+                        <div class="addperson">
+                            <div class="persontoadd">Infants</div>
+                            <div class="addinput">
+                                <div class="box remove">-</div>
+                                <div class="box"><input type="text" id="infantinput" value="0"></div>
+                                <div class="box add">+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="total">
+                        Total <div class="totaldisplay">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="displaybookings addblur">
+                <div class="agerange rangeforadults">
+                    <div class="agewithprice">ADULTS [$500]</div>
+                    <div class="ageforms formsforadults">
+                    </div>
+                </div>
+                <div class="agerange rangeforchildren">
+                    <div class="agewithprice">CHILDREN [$300]</div>
+                    <div class="ageforms formsforchildren">
+                    </div>
+                </div>
+                <div class="agerange rangeforinfants">
+                    <div class="agewithprice">INFANTS [$200]</div>
+                    <div class="ageforms formsforinfants">
+                    </div>
+                </div>
+                <div class="generalbutton">Book Now</div>
+            </div>
+
+            <div class="summarybox">
+                <div class="summaryfilm"></div>
+                <div class="summarytitle">This is the summary of your bookings:</div>
+                <div class="summarycontent">
+                    <div class="summary"><span class="formnumber"></span> <br> See more of their details below:</div>
+                    <div class="summarytable">
+                        <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Gender</th>
+                                <th>Age</th>
+                                <th>Action</th>
+                            </tr>
+                        </table>
+                        <div class="gradient"></div>
+                    </div>
+                    <div class="summaryprice">The total cost of all the seats is <span class="totalprice anti"></span></div>
+                </div>
+                <div class="summarycta">
+                    <div class="cancelsummary">Cancel</div>
+                    <div class="payup">Reserve</div>
+                </div>
+            </div>
+            
+            <div class="recordedit">
+                <div class="newform">
+                    <div class="formtag"></div>
+                    <div class="fullname input">
+                        <label for="fullname${formID}">FullName</label>
+                        <input type="text" id="fullname${formID}" oninput="validateIndieForms(event)">
+                        <div class="validatemessage"></div>
+                    </div>
+                    <div class="email input">
+                        <label for="email${formID}">Email</label>
+                        <input type="text" id="email${formID}" oninput="validateIndieForms(event)">
+                        <div class="validatemessage"></div>
+                    </div>
+                    <div class="phone input">
+                        <label for="phone${formID}">Phone</label>
+                        <input type="text" id="phone${formID}" oninput="validateIndieForms(event)">
+                        <div class="validatemessage"></div>
+                    </div>
+                    <div class="gender input">
+                        <label for="gender${formID}">Gender</label>
+                        <select name="gender${formID}" id="gender${formID}" onchange="validateIndieForms(event)">
+                            <option value=""></option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <div class="validatemessage"></div>
+                    </div>
+                    <div class="age input">
+                        <label for="age${formID}">Age</label>
+                        <input type="number" id="age${formID}" oninput="validateIndieForms(event)">
+                        <div class="validatemessage"></div>
+                    </div>
+                    <div class="button new" onclick="validateForms(event), preGeneralFunction()">Update</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
