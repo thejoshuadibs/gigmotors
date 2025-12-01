@@ -482,7 +482,7 @@ generalButton.addEventListener('click', generalFunction);
 
 summaryCancelButton.addEventListener('click', () => {
 	const confirmCancel = confirm(
-		'This whole session will be lost. Do u wish to continue?'
+		'This whole booking session will be lost. Do u wish to continue?'
 	);
 
 	if(confirmCancel) {
